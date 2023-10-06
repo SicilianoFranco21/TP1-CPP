@@ -1,0 +1,81 @@
+#include <iostream>
+#include "Vector.hpp"
+
+using namespace std;
+
+int main() {
+    Vector miVector;
+
+    Item itemCero("Item 0", "Cero");
+    Item itemUno("Item 1", "Uno");
+    Item itemDos("Item 2", "Dos");
+    Item itemTres("Item 3", "Tres");
+    Item itemCuatro("Item 4", "Cuatro");
+    Item itemCinco("Item 5", "Cinco");
+    Item itemSeis("Item 6", "Seis");
+    Item itemSiete("Item 7", "Siete");
+    Item itemOcho("Item 8", "Ocho");
+    Item itemNueve("Item 9", "Nueve");
+
+    cout << "tamanio: " << miVector.tamanio() << endl;
+
+    miVector.alta(&itemCero);
+    miVector[0]->listarInformacion();
+    cout << " > tamanio: " << miVector.tamanio() << endl;
+
+    miVector.alta(&itemUno);
+    miVector[1]->listarInformacion();
+    cout << " > tamanio: " << miVector.tamanio() << endl;
+
+    miVector.alta(&itemDos);
+    miVector[2]->listarInformacion();
+    cout << " > tamanio: " << miVector.tamanio() << endl;
+
+    miVector.alta(&itemTres);
+    miVector[3]->listarInformacion();
+    cout << " > tamanio: " << miVector.tamanio() << endl;
+/* 
+    miVector.alta(&itemCuatro, 1);
+    miVector[1]->listarInformacion();
+    cout << " > tamanio: " << miVector.tamanio() << endl; */
+/*   
+    miVector.alta(&itemSeis, 1);
+    miVector[5]->listarInformacion();
+    cout << " > tamanio: " << miVector.tamanio() << endl;
+
+    miVector.alta(&itemSiete, 2);
+    miVector[6]->listarInformacion();
+    cout << " > tamanio: " << miVector.tamanio() << endl;
+
+    miVector.alta(&itemOcho, 3);
+    miVector[7]->listarInformacion();
+    cout << " > tamanio: " << miVector.tamanio() << endl; */
+/*     miVector.alta(&itemSeis, 1);
+    miVector.alta(&itemSiete, 2);
+    miVector.alta(&itemOcho, 3);
+    miVector.alta(&itemNueve, 4); */
+/* 
+    Item* itemborrado1 = miVector.baja();
+    cout << *itemborrado1 << endl; */
+/*
+    Item* itemborrado2 = miVector.baja();
+    cout << *itemborrado2 << endl;
+
+    Item* itemborrado3 = miVector.baja();
+    cout << *itemborrado3 << endl; */
+
+    Item* itemborrado2 = miVector.baja(0);
+    cout << *itemborrado2 << endl; 
+
+    //miVector[0]->listarInformacion();
+    cout << miVector.tamanio() << endl;
+    cout << endl;
+    for (size_t i = 0; i < miVector.tamanio(); i++) {
+        miVector[i]->listarInformacion();
+        cout << endl;
+    }
+
+    // cout << miVector.tamanio() << endl;
+    cout << miVector.vacio() << endl;
+    return 0;
+}
