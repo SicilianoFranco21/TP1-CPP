@@ -4,11 +4,18 @@
 
 #include "Vector.hpp"
 
+
 class Inventario {
-public:
+    private:
+        Vector* miVector;
+        size_t capacidadMaximaAlmacenamiento;
 
+    public:
+        void agregarItem(Vector* almacenamientoItems);
 
-public:
+        void mostrarItems();
+
+        void guardarItems(std::string ruta_archivo);
 
 
 };
