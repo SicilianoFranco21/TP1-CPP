@@ -39,8 +39,7 @@ void Menu::ingresarOpcion(std::string& opcion, std::string mensaje) {
 }
 
 
-void Menu::ejecutarMenuPrincipal(Inventario& inventario) {
-    Vector vectorItems;
+void Menu::ejecutarMenuPrincipal(Inventario inventario) {
     
     mostrarMenuOpciones();
 
@@ -50,18 +49,15 @@ void Menu::ejecutarMenuPrincipal(Inventario& inventario) {
     Item itemUno("Item 1", "Uno");
     while (opcion != "4") {
         if (opcion == "1") {
-            vectorItems.alta(&itemUno);
+            inventario.agregarItem(&itemUno);
         }
         else if (opcion == "2") {
             // Llamar a funcionalidades de vector
-            vectorItems.baja();
+            inventario.borrarItem();
         }
         else if (opcion == "3") {
             // Llamar a funcionalidades de vector
-            for (size_t i = 0; i < vectorItems.tamanio(); i++) {
-                vectorItems[i]->listarInformacion();
-                std::cout << std::endl;
-            }
+            inventario.mostrarItems();
         }
         else {
             std::cout << "(>_<) NO ha ingresado una opcion valida!!! (>_<)" << std::endl;

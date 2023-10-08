@@ -6,18 +6,30 @@
 
 
 class Inventario {
-    private:
-        Vector* miVector;
+    public:
+        Vector almacenamientoItems;
         size_t capacidadMaximaAlmacenamiento;
 
     public:
-        void agregarItem(Vector* almacenamientoItems);
+        // PRE:
+        // POST: 
+        Inventario();
 
+        // PRE:
+        // POST: 
+        void agregarItem(Item* item);
+
+        // PRE:
+        // POST: 
+        void borrarItem();
+
+        // PRE:
+        // POST: 
         void mostrarItems();
 
+        // PRE:
+        // POST: 
         void guardarItems(std::string ruta_archivo);
-
-
 };
 
 #endif

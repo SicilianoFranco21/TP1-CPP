@@ -22,7 +22,7 @@ class Menu {
 
         // PRE :
         // POST:
-        static void ejecutarMenuPrincipal(Inventario& inventario);
+        static void ejecutarMenuPrincipal(Inventario inventario);
 };
 
 #endif

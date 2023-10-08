@@ -1,4 +1,4 @@
-#ifndef LECTOR_HPP
+/* #ifndef LECTOR_HPP
 #define LECTOR_HPP
 
 #include "Inventario.hpp"
@@ -13,11 +13,13 @@ const std::string RUTA_ARCHIVO = "saveFile.csv";
 
 class Lector {
     private:
-        Item* Lector::generarItem(std::string linea);
+
         static Vector* split(std::string cadena, char del);
 
+        static Item* generarItem(std::string linea);
+
     public:
-        void Lector::procesarArchivo(Vector* almacenamientoItems, std::string ruta_archivo);
+        static void procesarArchivo(Vector* almacenamientoItems, std::string ruta_archivo);
 };
 
-#endif
+#endif */
