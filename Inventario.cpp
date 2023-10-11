@@ -8,6 +8,7 @@ Inventario::Inventario() {
 
 void Inventario::agregarItem(Item* item) {
     almacenamientoItems.alta(item);
+    std::cout << std::endl;
 }
 
 
@@ -22,7 +23,7 @@ void Inventario::borrarItem() {
     else {
         almacenamientoItems.baja();
     } */
-    almacenamientoItems.baja();
+    std::cout << *almacenamientoItems.baja() << std::endl;
 }
 
 
@@ -38,4 +39,3 @@ void Inventario::guardarItems(std::string ruta_archivo) {
     // Crear metodo de Lector para procesar el archivo
     // Este metodo deberia agregar a almacenamientoItems los items indicados en el .csv
 }
-

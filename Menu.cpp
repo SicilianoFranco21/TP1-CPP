@@ -1,4 +1,5 @@
 #include "Menu.hpp"
+#include "Lector.hpp"
 
 /* 
 
@@ -69,4 +70,5 @@ void Menu::ejecutarMenuPrincipal(Inventario inventario) {
         std::system("clear");
     }
     std::cout << "Gracias por usar el inventario de James! Hasta luego\nPD: Jugate 'Silent Hill 4: The room'" << std::endl;
+    Lector::agregarItemAlFinal("testSaveFile.csv", inventario.almacenamientoItems);
 }
